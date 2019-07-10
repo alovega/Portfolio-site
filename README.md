@@ -4,6 +4,7 @@ This is a portfolio-site/Resume I created using start-bootsrap theme.This theme 
 
 ## Preview
 
+![Alt text](/../master/img/selection_058.png?raw=true "Optional Title")
 
 **[View Live Preview](https://alovega.github.io/Portfolio-site/.)**
 

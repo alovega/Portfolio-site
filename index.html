@@ -1,431 +1,739 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
+    <title>Kevin Alwavega — Senior Backend Developer</title>
+    <meta
+      name="description"
+      content="Kevin Alwavega — Senior Backend Developer (Python, PHP, Go, JavaScript). Building fast, scalable backend systems & APIs."
+    />
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+    <!-- Tailwind CSS CDN (great for a single-file GitHub Pages portfolio) -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <title>Resume - Start Bootstrap Theme</title>
+    <!-- Optional: Tailwind config (colors, fonts) -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: [
+                "ui-sans-serif",
+                "system-ui",
+                "-apple-system",
+                "Segoe UI",
+                "Roboto",
+                "Helvetica",
+                "Arial",
+                "Apple Color Emoji",
+                "Segoe UI Emoji",
+              ],
+            },
+            boxShadow: {
+              glow: "0 0 0 1px rgba(255,255,255,.08), 0 10px 30px rgba(0,0,0,.35)",
+            },
+          },
+        },
+      };
+    </script>
 
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
-  <!-- Custom fonts for this template -->
-  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <style>
+      /* Subtle animated gradient background */
+      .bg-animated {
+        background: radial-gradient(800px circle at 15% 25%, rgba(56, 189, 248, 0.18), transparent 45%),
+          radial-gradient(900px circle at 85% 35%, rgba(99, 102, 241, 0.22), transparent 40%),
+          radial-gradient(900px circle at 50% 85%, rgba(34, 197, 94, 0.14), transparent 45%),
+          linear-gradient(180deg, #070a12 0%, #070a12 40%, #05070d 100%);
+      }
+      .noise:before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.08;
+        mix-blend-mode: overlay;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.65'/%3E%3C/svg%3E");
+      }
+      /* Nice focus ring */
+      :focus-visible {
+        outline: 2px solid rgba(56, 189, 248, 0.8);
+        outline-offset: 3px;
+      }
+    </style>
+  </head>
 
-  <!-- Custom styles for this template -->
-  <link href="css/resume.min.css" rel="stylesheet">
+  <body class="bg-animated noise text-slate-100 antialiased">
+    <!-- Top gradient line -->
+    <div class="h-1 w-full bg-gradient-to-r from-sky-400 via-indigo-400 to-emerald-400"></div>
 
-</head>
+    <!-- Mobile top bar -->
+    <header
+      class="sticky top-0 z-50 border-b border-white/10 bg-black/40 backdrop-blur-xl lg:hidden"
+    >
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+        <a href="#top" class="font-semibold tracking-tight">
+          Kevin <span class="text-sky-400">Alwavega</span>
+        </a>
+        <button
+          id="menuBtn"
+          class="rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm hover:bg-white/10"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <i class="fa-solid fa-bars"></i> Menu
+        </button>
+      </div>
+      <nav
+        id="mobileMenu"
+        class="hidden border-t border-white/10 px-4 py-3"
+        aria-label="Mobile navigation"
+      >
+        <ul class="grid gap-2 text-sm">
+          <li><a class="block rounded-lg px-3 py-2 hover:bg-white/5" href="#about">About</a></li>
+          <li><a class="block rounded-lg px-3 py-2 hover:bg-white/5" href="#experience">Experience</a></li>
+          <li><a class="block rounded-lg px-3 py-2 hover:bg-white/5" href="#projects">Projects</a></li>
+          <li><a class="block rounded-lg px-3 py-2 hover:bg-white/5" href="#education">Education</a></li>
+          <li><a class="block rounded-lg px-3 py-2 hover:bg-white/5" href="#skills">Skills</a></li>
+          <li><a class="block rounded-lg px-3 py-2 hover:bg-white/5" href="#interests">Interests</a></li>
+          <li><a class="block rounded-lg px-3 py-2 hover:bg-white/5" href="#awards">Awards</a></li>
+        </ul>
+      </nav>
+    </header>
 
-<body id="page-top">
+    <div id="top" class="mx-auto grid max-w-6xl gap-8 px-4 py-10 lg:grid-cols-[260px_1fr] lg:py-14">
+      <!-- Desktop sidebar -->
+      <aside
+        class="hidden lg:sticky lg:top-8 lg:block lg:h-[calc(100vh-4rem)]"
+        aria-label="Sidebar"
+      >
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-5 shadow-glow backdrop-blur-xl">
+          <div class="flex items-center gap-4">
+            <img
+              src="img/kelvin.jpeg"
+              alt="Kevin Alwavega"
+              class="h-16 w-16 rounded-2xl object-cover ring-1 ring-white/10"
+            />
+            <div>
+              <div class="text-lg font-semibold leading-tight">
+                Kevin <span class="text-sky-400">Alwavega</span>
+              </div>
+              <div class="text-xs text-slate-300">Senior Backend Developer</div>
+            </div>
+          </div>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-    <a class="navbar-brand js-scroll-trigger" href="#page-top">
-      <span class="d-block d-lg-none">Kevin Alwavega</span>
-      <span class="d-none d-lg-block">
-        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/kelvin.jpeg" alt="https://photos.app.goo.gl/6Tf175DnhjeTyuVH7">
-      </span>
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#Projects">Projects</a>
-          </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#education">Education</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
-        </li>
-      </ul>
+          <div class="mt-4 space-y-2 text-sm text-slate-300">
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-location-dot text-slate-400"></i>
+              <span>Kajiado · Kitengela</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-phone text-slate-400"></i>
+              <a class="hover:text-sky-300" href="tel:+254748276871">+254 748 276 871</a>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-envelope text-slate-400"></i>
+              <a class="hover:text-sky-300" href="mailto:alovegakevin@gmail.com"
+                >alovegakevin@gmail.com</a
+              >
+            </div>
+          </div>
+
+          <!-- Social -->
+          <div class="mt-5 grid grid-cols-4 gap-2">
+            <a
+              class="group flex items-center justify-center rounded-xl border border-white/10 bg-white/5 p-2 hover:bg-white/10"
+              href="https://www.linkedin.com/in/kevin-alwavega-403843116/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn"
+            >
+              <i class="fa-brands fa-linkedin-in text-slate-200 group-hover:text-sky-300"></i>
+            </a>
+            <a
+              class="group flex items-center justify-center rounded-xl border border-white/10 bg-white/5 p-2 hover:bg-white/10"
+              href="https://github.com/alovega"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub"
+            >
+              <i class="fa-brands fa-github text-slate-200 group-hover:text-sky-300"></i>
+            </a>
+            <a
+              class="group flex items-center justify-center rounded-xl border border-white/10 bg-white/5 p-2 hover:bg-white/10"
+              href="https://twitter.com/alovegakevin"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Twitter"
+            >
+              <i class="fa-brands fa-x-twitter text-slate-200 group-hover:text-sky-300"></i>
+            </a>
+            <a
+              class="group flex items-center justify-center rounded-xl border border-white/10 bg-white/5 p-2 hover:bg-white/10"
+              href="https://web.facebook.com/kevin.alovega"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Facebook"
+            >
+              <i class="fa-brands fa-facebook-f text-slate-200 group-hover:text-sky-300"></i>
+            </a>
+          </div>
+
+          <!-- Nav -->
+          <nav class="mt-6" aria-label="Primary navigation">
+            <ul class="space-y-1 text-sm">
+              <li><a class="block rounded-xl px-3 py-2 text-slate-200 hover:bg-white/5" href="#about">About</a></li>
+              <li><a class="block rounded-xl px-3 py-2 text-slate-200 hover:bg-white/5" href="#experience">Experience</a></li>
+              <li><a class="block rounded-xl px-3 py-2 text-slate-200 hover:bg-white/5" href="#projects">Projects</a></li>
+              <li><a class="block rounded-xl px-3 py-2 text-slate-200 hover:bg-white/5" href="#education">Education</a></li>
+              <li><a class="block rounded-xl px-3 py-2 text-slate-200 hover:bg-white/5" href="#skills">Skills</a></li>
+              <li><a class="block rounded-xl px-3 py-2 text-slate-200 hover:bg-white/5" href="#interests">Interests</a></li>
+              <li><a class="block rounded-xl px-3 py-2 text-slate-200 hover:bg-white/5" href="#awards">Awards</a></li>
+            </ul>
+          </nav>
+
+          <!-- CTA -->
+          <div class="mt-6 grid gap-2">
+            <a
+              href="mailto:alovegakevin@gmail.com"
+              class="inline-flex items-center justify-center gap-2 rounded-xl bg-sky-500 px-4 py-2 text-sm font-semibold text-white hover:bg-sky-400"
+            >
+              <i class="fa-solid fa-paper-plane"></i> Contact Me
+            </a>
+            <a
+              href="https://github.com/alovega"
+              target="_blank"
+              rel="noreferrer"
+              class="inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-slate-100 hover:bg-white/10"
+            >
+              <i class="fa-solid fa-code"></i> View GitHub
+            </a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main content -->
+      <main class="space-y-10">
+        <!-- HERO / ABOUT -->
+        <section
+          id="about"
+          class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-glow backdrop-blur-xl sm:p-8"
+        >
+          <div class="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
+            <div>
+              <p class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-200">
+                <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+                Available for backend roles & consulting
+              </p>
+
+              <h1 class="mt-4 text-3xl font-extrabold tracking-tight sm:text-4xl">
+                Senior Backend Developer building
+                <span class="bg-gradient-to-r from-sky-400 via-indigo-400 to-emerald-400 bg-clip-text text-transparent">
+                  scalable APIs & systems
+                </span>
+              </h1>
+
+              <p class="mt-4 max-w-2xl text-slate-200 leading-relaxed">
+                I’m Kevin Alwavega — a backend-focused engineer experienced in
+                <span class="font-semibold text-slate-100">Python, PHP, Go, and JavaScript</span>.
+                I design and ship reliable services, improve performance, build maintainable codebases,
+                and collaborate closely with product, QA, and leadership to deliver high-quality systems.
+              </p>
+
+              <!-- Quick highlights -->
+              <div class="mt-6 grid gap-3 sm:grid-cols-3">
+                <div class="rounded-2xl border border-white/10 bg-black/20 p-4">
+                  <div class="text-xs text-slate-300">Focus</div>
+                  <div class="mt-1 font-semibold">Backend & APIs</div>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-black/20 p-4">
+                  <div class="text-xs text-slate-300">Strength</div>
+                  <div class="mt-1 font-semibold">Performance & Scalability</div>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-black/20 p-4">
+                  <div class="text-xs text-slate-300">Style</div>
+                  <div class="mt-1 font-semibold">Clean, tested code</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex gap-3 sm:flex-col sm:items-end">
+              <a
+                class="inline-flex items-center gap-2 rounded-xl bg-white/10 px-4 py-2 text-sm font-semibold hover:bg-white/15"
+                href="#projects"
+              >
+                <i class="fa-solid fa-bolt text-sky-300"></i> See Projects
+              </a>
+              <a
+                class="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold hover:bg-white/10"
+                href="#experience"
+              >
+                <i class="fa-solid fa-briefcase"></i> Experience
+              </a>
+            </div>
+          </div>
+
+          <!-- Social row (for desktop main too) -->
+          <div class="mt-6 flex flex-wrap gap-2">
+            <a class="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm hover:bg-white/10"
+              href="https://www.linkedin.com/in/kevin-alwavega-403843116/" target="_blank" rel="noreferrer">
+              <i class="fa-brands fa-linkedin-in text-sky-300"></i> LinkedIn
+            </a>
+            <a class="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm hover:bg-white/10"
+              href="https://github.com/alovega" target="_blank" rel="noreferrer">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+            <a class="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm hover:bg-white/10"
+              href="https://twitter.com/alovegakevin" target="_blank" rel="noreferrer">
+              <i class="fa-brands fa-x-twitter"></i> X
+            </a>
+            <a class="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm hover:bg-white/10"
+              href="mailto:alovegakevin@gmail.com">
+              <i class="fa-solid fa-envelope text-emerald-300"></i> Email
+            </a>
+          </div>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section
+          id="experience"
+          class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-glow backdrop-blur-xl sm:p-8"
+        >
+          <div class="flex items-center justify-between gap-4">
+            <h2 class="text-2xl font-bold tracking-tight">Experience</h2>
+            <span class="text-xs text-slate-300">Most recent first</span>
+          </div>
+
+          <div class="mt-6 space-y-6">
+            <!-- Role -->
+            <article class="rounded-2xl border border-white/10 bg-black/20 p-5">
+              <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                <div>
+                  <h3 class="text-lg font-semibold">VAS Engineer (Backend)</h3>
+                  <p class="text-sm text-slate-300">Roamtech Limited</p>
+                </div>
+                <div class="text-sm text-sky-300">June 2022 — Present</div>
+              </div>
+
+              <p class="mt-4 text-slate-200 leading-relaxed">
+                Senior backend developer collaborating with the Head of Technology to design, build,
+                and maintain scalable API services and portals. Hands-on with concurrency testing,
+                requirement analysis, feasibility studies, and mentoring junior developers.
+              </p>
+
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">Python (Flask)</span>
+                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">Vue.js</span>
+                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">PHP (Laravel)</span>
+                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">Go</span>
+                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">APIs</span>
+              </div>
+            </article>
+
+            <article class="rounded-2xl border border-white/10 bg-black/20 p-5">
+              <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                <div>
+                  <h3 class="text-lg font-semibold">Back-End Developer</h3>
+                  <p class="text-sm text-slate-300">Wraptious Limited</p>
+                </div>
+                <div class="text-sm text-sky-300">June 2021 — August 2022</div>
+              </div>
+
+              <ul class="mt-4 list-disc space-y-2 pl-5 text-slate-200">
+                <li>Built maintainable Python tests for Wraptious API to improve reliability.</li>
+                <li>Improved/refactored API codebase for readability and reduced complexity.</li>
+                <li>Designed log parsing/search system for insights and operational visibility.</li>
+                <li>Created backup/archiving strategy for data integrity and availability.</li>
+              </ul>
+
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">Python (Flask)</span>
+                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">AngularJS</span>
+                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">Testing</span>
+                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">Scripting</span>
+              </div>
+            </article>
+
+            <article class="rounded-2xl border border-white/10 bg-black/20 p-5">
+              <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                <div>
+                  <h3 class="text-lg font-semibold">Back-end Engineer</h3>
+                  <p class="text-sm text-slate-300">Helppr AI</p>
+                </div>
+                <div class="text-sm text-sky-300">December 2020 — August 2021</div>
+              </div>
+
+              <ul class="mt-4 list-disc space-y-2 pl-5 text-slate-200">
+                <li>Built and maintained APIs consumed by customers and internal apps.</li>
+                <li>Designed/maintained SQL databases for efficient data storage & retrieval.</li>
+                <li>Worked with task queues and integrations (Celery, RabbitMQ).</li>
+                <li>Contributed to DevOps workflows and improved frontend/backend efficiency.</li>
+              </ul>
+
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">Python (Django)</span>
+                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">AngularJS</span>
+                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">Celery</span>
+                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">RabbitMQ</span>
+              </div>
+            </article>
+
+            <article class="rounded-2xl border border-white/10 bg-black/20 p-5">
+              <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                <div>
+                  <h3 class="text-lg font-semibold">Full-stack Developer</h3>
+                  <p class="text-sm text-slate-300">Finance Plan Limited</p>
+                </div>
+                <div class="text-sm text-sky-300">August 2019 — December 2020</div>
+              </div>
+
+              <ul class="mt-4 list-disc space-y-2 pl-5 text-slate-200">
+                <li>Developed maintainable code for core finance system framework.</li>
+                <li>Collaborated with banking & compliance to deliver mobile-friendly features.</li>
+                <li>Gathered requirements and shipped improvements across new/existing apps.</li>
+              </ul>
+
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">Python (Django)</span>
+                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">AngularJS</span>
+                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">Finance Systems</span>
+              </div>
+            </article>
+
+            <article class="rounded-2xl border border-white/10 bg-black/20 p-5">
+              <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                <div>
+                  <h3 class="text-lg font-semibold">Implementation Engineer</h3>
+                  <p class="text-sm text-slate-300">Interintel Technologies</p>
+                </div>
+                <div class="text-sm text-sky-300">January 2019 — August 2019</div>
+              </div>
+
+              <p class="mt-4 text-slate-200 leading-relaxed">
+                Built and maintained web applications, helped implement UI designs with UX, supported
+                database management, created training materials, and collaborated with customers and internal teams.
+              </p>
+            </article>
+
+            <article class="rounded-2xl border border-white/10 bg-black/20 p-5">
+              <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                <div>
+                  <h3 class="text-lg font-semibold">Intern</h3>
+                  <p class="text-sm text-slate-300">National Hospital Insurance Fund</p>
+                </div>
+                <div class="text-sm text-sky-300">December 2017 — March 2018</div>
+              </div>
+
+              <p class="mt-4 text-slate-200 leading-relaxed">
+                Supported compliance workflows by reviewing hospital claims data and helping streamline approvals.
+                Collected claims & disease data for planning and better allocation of funds.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section
+          id="projects"
+          class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-glow backdrop-blur-xl sm:p-8"
+        >
+          <div class="flex items-center justify-between gap-4">
+            <h2 class="text-2xl font-bold tracking-tight">Projects</h2>
+            <a
+              class="text-sm text-sky-300 hover:text-sky-200"
+              href="https://github.com/alovega"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View all on GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+
+          <div class="mt-6 grid gap-4 md:grid-cols-2">
+            <!-- Card -->
+            <article class="group rounded-2xl border border-white/10 bg-black/20 p-5 hover:bg-black/25">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <h3 class="text-lg font-semibold">Hela-Monitor</h3>
+                  <p class="mt-1 text-sm text-slate-300">
+                    Internal database-driven app for monitoring microservices APIs.
+                  </p>
+                </div>
+                <i class="fa-solid fa-heart-pulse text-sky-300"></i>
+              </div>
+
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">Django</span>
+                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">AngularJS</span>
+                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">Monitoring</span>
+              </div>
+
+              <div class="mt-5 flex gap-2">
+                <a
+                  class="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm font-semibold hover:bg-white/10"
+                  href="https://github.com/alovega/Monitor-Frontend"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <i class="fa-solid fa-code"></i> Repo
+                </a>
+                <a
+                  class="inline-flex items-center gap-2 rounded-xl bg-sky-500 px-3 py-2 text-sm font-semibold text-white hover:bg-sky-400"
+                  href="https://monitor-frontend.vercel.app/auth/login"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <i class="fa-solid fa-eye"></i> Live
+                </a>
+              </div>
+            </article>
+
+            <article class="group rounded-2xl border border-white/10 bg-black/20 p-5 hover:bg-black/25">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <h3 class="text-lg font-semibold">StackOverflow-lite</h3>
+                  <p class="mt-1 text-sm text-slate-300">
+                    Bootcamp project: Flask-RESTful API focusing on core backend skills.
+                  </p>
+                </div>
+                <i class="fa-solid fa-layer-group text-indigo-300"></i>
+              </div>
+
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">Flask</span>
+                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">REST</span>
+                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">Python</span>
+              </div>
+
+              <div class="mt-5">
+                <a
+                  class="inline-flex items-center gap-2 rounded-xl bg-sky-500 px-3 py-2 text-sm font-semibold text-white hover:bg-sky-400"
+                  href="https://github.com/alovega/StackOverflow-Lite/tree/develop"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <i class="fa-solid fa-code"></i> Repo
+                </a>
+              </div>
+            </article>
+
+            <article class="group rounded-2xl border border-white/10 bg-black/20 p-5 hover:bg-black/25">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <h3 class="text-lg font-semibold">Shopping-Cart</h3>
+                  <p class="mt-1 text-sm text-slate-300">
+                    Frontend practice project using vanilla JS, CSS3 and HTML5.
+                  </p>
+                </div>
+                <i class="fa-solid fa-cart-shopping text-emerald-300"></i>
+              </div>
+
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">HTML5</span>
+                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">CSS3</span>
+                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">JavaScript</span>
+              </div>
+
+              <div class="mt-5 flex gap-2">
+                <a
+                  class="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm font-semibold hover:bg-white/10"
+                  href="https://github.com/alovega/ShoppingCart"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <i class="fa-solid fa-code"></i> Repo
+                </a>
+                <a
+                  class="inline-flex items-center gap-2 rounded-xl bg-sky-500 px-3 py-2 text-sm font-semibold text-white hover:bg-sky-400"
+                  href="https://alovega.github.io/ShoppingCart/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <i class="fa-solid fa-eye"></i> Live
+                </a>
+              </div>
+            </article>
+
+            <article class="group rounded-2xl border border-white/10 bg-black/20 p-5 hover:bg-black/25">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <h3 class="text-lg font-semibold">Textiles</h3>
+                  <p class="mt-1 text-sm text-slate-300">
+                    Short frontend project started with Africa Collect Textiles.
+                  </p>
+                </div>
+                <i class="fa-solid fa-shirt text-slate-200"></i>
+              </div>
+
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">Frontend</span>
+                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">HTML</span>
+                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">CSS</span>
+              </div>
+
+              <div class="mt-5 flex gap-2">
+                <a
+                  class="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm font-semibold hover:bg-white/10"
+                  href="https://github.com/alovega/textiles/blob/master/index.html"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <i class="fa-solid fa-code"></i> Repo
+                </a>
+                <a
+                  class="inline-flex items-center gap-2 rounded-xl bg-sky-500 px-3 py-2 text-sm font-semibold text-white hover:bg-sky-400"
+                  href="https://alovega.github.io/textiles/."
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <i class="fa-solid fa-eye"></i> Live
+                </a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section
+          id="education"
+          class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-glow backdrop-blur-xl sm:p-8"
+        >
+          <h2 class="text-2xl font-bold tracking-tight">Education</h2>
+
+          <div class="mt-6 grid gap-4">
+            <article class="rounded-2xl border border-white/10 bg-black/20 p-5">
+              <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                <div>
+                  <h3 class="text-lg font-semibold">Technical University of Mombasa</h3>
+                  <p class="text-sm text-slate-300">BSc — Mathematics & Computer Science</p>
+                  <p class="mt-2 text-slate-200">
+                    Statistical + software development track • <span class="text-slate-300">GPA:</span> 3.0
+                  </p>
+                </div>
+                <div class="text-sm text-sky-300">Sep 2013 — Nov 2017</div>
+              </div>
+            </article>
+
+            <article class="rounded-2xl border border-white/10 bg-black/20 p-5">
+              <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                <div>
+                  <h3 class="text-lg font-semibold">Utumishi Boys High School</h3>
+                  <p class="text-sm text-slate-300">K.C.S.E Certificate • <span class="text-slate-300">GPA:</span> 3.56</p>
+                </div>
+                <div class="text-sm text-sky-300">Feb 2009 — Nov 2012</div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section
+          id="skills"
+          class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-glow backdrop-blur-xl sm:p-8"
+        >
+          <h2 class="text-2xl font-bold tracking-tight">Skills</h2>
+
+          <div class="mt-6 grid gap-6 md:grid-cols-2">
+            <div class="rounded-2xl border border-white/10 bg-black/20 p-5">
+              <h3 class="font-semibold">Languages & Tools</h3>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="rounded-full bg-white/5 px-3 py-1 text-sm ring-1 ring-white/10">Python</span>
+                <span class="rounded-full bg-white/5 px-3 py-1 text-sm ring-1 ring-white/10">Go</span>
+                <span class="rounded-full bg-white/5 px-3 py-1 text-sm ring-1 ring-white/10">PHP</span>
+                <span class="rounded-full bg-white/5 px-3 py-1 text-sm ring-1 ring-white/10">JavaScript</span>
+                <span class="rounded-full bg-white/5 px-3 py-1 text-sm ring-1 ring-white/10">Flask</span>
+                <span class="rounded-full bg-white/5 px-3 py-1 text-sm ring-1 ring-white/10">Django</span>
+                <span class="rounded-full bg-white/5 px-3 py-1 text-sm ring-1 ring-white/10">Laravel</span>
+                <span class="rounded-full bg-white/5 px-3 py-1 text-sm ring-1 ring-white/10">SQL</span>
+                <span class="rounded-full bg-white/5 px-3 py-1 text-sm ring-1 ring-white/10">Celery</span>
+                <span class="rounded-full bg-white/5 px-3 py-1 text-sm ring-1 ring-white/10">RabbitMQ</span>
+              </div>
+            </div>
+
+            <div class="rounded-2xl border border-white/10 bg-black/20 p-5">
+              <h3 class="font-semibold">Workflow</h3>
+              <ul class="mt-4 space-y-2 text-slate-200">
+                <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-300 mt-1"></i> Mobile-first, responsive design</li>
+                <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-300 mt-1"></i> Cross-browser testing & debugging</li>
+                <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-300 mt-1"></i> Cross-functional collaboration</li>
+                <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-300 mt-1"></i> API design & implementation (Flask / Django)</li>
+                <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-300 mt-1"></i> Agile development & Scrum</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- INTERESTS -->
+        <section
+          id="interests"
+          class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-glow backdrop-blur-xl sm:p-8"
+        >
+          <h2 class="text-2xl font-bold tracking-tight">Interests</h2>
+          <div class="mt-4 space-y-3 text-slate-200 leading-relaxed">
+            <p>
+              When I’m not building software, I enjoy being outdoors — mountain cycling, occasional climbing,
+              and kayaking when I can.
+            </p>
+            <p>
+              Indoors, I’m into sci-fi/fantasy movies and shows, experimenting in the kitchen, and keeping up
+              with the latest web & backend engineering trends.
+            </p>
+          </div>
+        </section>
+
+        <!-- AWARDS -->
+        <section
+          id="awards"
+          class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-glow backdrop-blur-xl sm:p-8"
+        >
+          <h2 class="text-2xl font-bold tracking-tight">Awards & Certifications</h2>
+
+          <ul class="mt-6 space-y-3 text-slate-200">
+            <li class="flex items-start gap-3 rounded-2xl border border-white/10 bg-black/20 p-4">
+              <i class="fa-solid fa-trophy text-amber-300 mt-1"></i>
+              <div>
+                <div class="font-semibold">Google Analytics Certified Developer</div>
+              </div>
+            </li>
+            <li class="flex items-start gap-3 rounded-2xl border border-white/10 bg-black/20 p-4">
+              <i class="fa-solid fa-trophy text-amber-300 mt-1"></i>
+              <div>
+                <div class="font-semibold">Mobile Web Specialist — Google Certification</div>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Footer -->
+        <footer class="pb-10 text-center text-xs text-slate-400">
+          <p>
+            © <span id="year"></span> Kevin Alwavega • Built with Tailwind CSS •
+            <a class="text-sky-300 hover:text-sky-200" href="#top">Back to top</a>
+          </p>
+        </footer>
+      </main>
     </div>
-  </nav>
 
-  <div class="container-fluid p-0">
+    <script>
+      // Mobile menu toggle
+      const btn = document.getElementById("menuBtn");
+      const menu = document.getElementById("mobileMenu");
+      if (btn && menu) {
+        btn.addEventListener("click", () => {
+          const open = menu.classList.toggle("hidden") === false;
+          btn.setAttribute("aria-expanded", String(open));
+        });
+      }
 
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
-      <div class="w-100">
-        <h1 class="mb-0">Kevin
-          <span class="text-primary">Alwavega</span>
-        </h1>
-        <div class="subheading mb-5">223 Kajiado · KItengela, (254) 748-276871·
-          <a href="mailto:alovegakevin@gmail.com">alovegakevin@gmail.com</a>
-        </div>
-        <p class="lead mb-5"> 
-          I am a Senior Backend Developer proficient in Python, PHP, Go, and JavaScript. With extensive experience in designing, developing, and maintaining robust software systems, I have a strong focus on backend development.
-          Throughout my career, I have collaborated closely with the Head of Technology to deliver exceptional software solutions. I excel in implementing approved designs, conducting feasibility studies, and participating in concurrency testing for API services and portals. My expertise in analyzing user needs and software requirements helps drive effective product designs.
-          Staying up-to-date with industry trends and best practices, I continuously enhance software development processes and maintain a high standard of code quality. Additionally, I provide technical guidance and mentorship to junior developers, fostering a collaborative and knowledge-sharing environment.
-          In my previous role as a Software Engineer at Wraptious, I built highly maintainable Python code for the Finance system. I also have experience in PHP, Go, and JavaScript, which has allowed me to work with diverse tech stacks and contribute to the development of various systems.
-          With a keen eye for detail and a passion for problem-solving, I consistently ensure optimal performance, scalability, and security of backend systems. I take pride in my ability to collaborate effectively with stakeholders and deliver high-quality software solutions.
-          #SeniorBackendDeveloper #Python #PHP #Go #JavaScript #APIs #CodeQuality #Collaboration
-        </p>
-        <div class="social-icons">
-          <a href="https://www.linkedin.com/in/kevin-alwavega-403843116/">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a href="https://github.com/alovega">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="https://twitter.com/alovegakevin">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="https://web.facebook.com/kevin.alovega">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
-      <div class="w-100">
-        <h2 class="mb-5">Experience</h2>
-        
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">VAS Enginner</h3>
-            <div class="subheading mb-3">Roamtech Limited</div>
-            <p>Working as a Back-End engineer. The main tech stack is Python Flask, VueJs, PHP Laravel, Go. </p>
-            <p>
-              As a Senior Backend Developer at Roamtech Limited, I collaborate closely with the Head of Technology to design, develop, modify, and maintain 
-              software systems with a focus on backend development. I implement approved designs and developments based on business specifications, ensuring 
-              optimal performance and stability through participation in concurrency testing for API services and portals. Conducting thorough analysis of 
-              user needs and software requirements, I also conduct feasibility studies to drive effective product designs. Collaborating with cross-functional 
-              teams, I contribute to the development of software system testing, validation procedures, programming, and documentation. 
-              By staying up-to-date with industry trends and best practices, I continuously enhance our software development processes. 
-              Providing technical guidance and mentorship to junior developers, I foster a collaborative and knowledge-sharing environment. 
-              Additionally, I troubleshoot and resolve software defects and issues, ensuring a seamless user experience. 
-              Through effective collaboration with stakeholders, including product managers, designers, and QA teams, 
-              I ensure alignment and successful delivery of software projects. Upholding high code quality standards, I adhere to best practices and 
-              coding standards while prioritizing scalability, security, and efficiency of backend systems through appropriate design and optimization techniques.
-              #BackendDevelopment #SoftwareSystems #APIIntegration #Collaboration #Mentorship #CodeQuality #ProblemSolving
-            </p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">June 2022 - Current</span>
-          </div>
-        </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Back-End Developer</h3>
-            <div class="subheading mb-3">Wraptious Limited</div>
-            <p>Worked as a Back-End developer. The main tech stack was Python Flask and Angular Js. </p>
-            <p>
-              As a Software Engineer at Wraptious, I played a vital role in designing and implementing robust and maintainable systems. I developed highly maintainable Python tests for the Wraptious API, ensuring the reliability and quality of the software. Additionally, I configured and maintained shell scripts for data warehousing, enabling efficient storage and retrieval of Wraptious system data.
-              Collaborating closely with the team, I contributed to improving and refactoring the Python API codebase, resulting in enhanced code complexity and readability. I took on the responsibility of designing a log parsing and search system, providing valuable insights and actionable data for Wraptious systems.
-              Furthermore, I designed and implemented a comprehensive database backup, archiving, and storage strategy, ensuring the security and accessibility of Wraptious system data. By implementing these strategies, I played a key role in maintaining the integrity and availability of critical information.
-              Overall, my contributions as a Software Engineer at Wraptious showcased my strong technical skills in Python, data management, and system design. I consistently demonstrated a commitment to delivering high-quality software solutions and collaborating effectively with cross-functional teams.
-              #PythonDevelopment #Testing #DataWarehousing #CodeRefactoring #SystemDesign #DatabaseManagement #Collaboration
-            </p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">June 2021 - August 2022</span>
-          </div>
-        </div>
-        
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Back-end Egineer</h3>
-            <div class="subheading mb-3">Helppr AI</div>
-            <p>
-              Worked as a full stack developer. The main tech stack is Python Django and Angular Js.
-            </p>
-            <p>
-                During my tenure as a Backend Developer at Helppr AI, I played a key role in building and maintaining robust APIs that were utilized by both our customers and internal applications. I also took responsibility for building and maintaining SQL databases, ensuring efficient data storage and retrieval.
-                Within the role, I actively engaged in shell scripting to automate various tasks and streamline our processes. Additionally, I took charge of building and maintaining crucial task management integrations, such as Celery and RabbitMQ, to enhance our workflow efficiency.
-                Furthermore, I actively contributed to enhancing our DevOps stack and workflows, implementing best practices and tools to optimize the development and deployment processes. Collaborating closely with frontend engineers, I worked to optimize frontend/backend efficiency, ensuring a seamless and responsive user experience.
-                Throughout my time at [Company Name], I consistently demonstrated a strong technical aptitude, utilizing my skills in backend development, database management, shell scripting, and DevOps to drive impactful results.
-                #BackendDevelopment #APIs #SQLDatabase #ShellScripting #TaskManagement #DevOps #Collaboration
-            </p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">December 2020 - August 2021</span>
-          </div>
-        </div>
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Full-stack Developer</h3>
-            <div class="subheading mb-3">Finance Plan Limited</div>
-            <p>Worked as a full stack developer. The main tech stack is Python Django and Angular Js. </p>
-            <p>
-              As a Python Developer at Finance Plan Limited, I played a crucial role in developing highly maintainable and robust code for the Finance system, which served as the core framework. I demonstrated a strong focus on code quality and followed best practices to ensure the stability and reliability of the system.
-              Collaborating closely with the banking and compliance department, I actively participated in the design and implementation of new application systems that aimed to enhance client requirements, particularly in terms of mobile computing capabilities. By leveraging my technical expertise and understanding of business needs, I contributed to the successful delivery of solutions aligned with client expectations.
-              Working as part of a cross-functional team, including business analysts, developers, and technical support professionals, I played an active role in gathering comprehensive requirement specifications for both new and existing applications. Through effective communication and collaboration, we were able to ensure that the development efforts addressed all necessary functionalities and met the expectations of stakeholders.
-              Throughout my tenure, I consistently demonstrated a commitment to delivering high-quality software solutions that met the needs of the finance industry. My ability to collaborate effectively with diverse teams and understand the intricate requirements of the business contributed to the success of our projects.
-              #PythonDevelopment #CodeQuality #FinanceSystems #ApplicationDesign #ClientRequirements #CrossFunctionalCollaboration
-            </p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">August 2019- December 2020</span>
-          </div>
-        </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Implementation Engineer</h3>
-            <div class="subheading mb-3">Interintel Technologies</div>
-            <p>Tasked with developing
-              training materials including Computer Based Training for clients, developing and maintaining web
-              applications such as front-end user interface, Working with the UX designer in implementing the UI designs,  database management, Implementing logical functions and solutions for Inter Intel systems, liaising with customers and internal team and
-              assisting with help desk tasks, Document and monitor requirements needed to institute proposed updates in relation to customer experience.</p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">January 2019 - August 2019</span>
-          </div>
-        </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Intern</h3>
-            <div class="subheading mb-3">National Hospital Insurance Fund</div>
-            <p>
-              Capitalize on my statistical and research skills. Mostly made my presence felt at the compliance
-              department, most of my work was reviewing and inspection of hospital claims and ease the work for 
-              the compliance officers on approving them. Collecting claims and diseases data from the hospital claims
-              to help in better planning and allocation of funds to hospitals by the organisation
-            </p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">December 2017 - March 2018</span>
-          </div>
-        </div>
-        </div>
-
-    </section>
-    <hr class="m-0">
-    <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="Projects">
-        <div class="w-100">
-          <h2 class="mb-5">Projects</h2>
-          <div class="resume-content">
-            <div class="subheading mb-3">Hela-Monitor</div>
-            <p>
-              This Was a database driven project. Mainly to be used internally for monitoring all microservices APIs.
-              So its a whole web app, created using Python-django framework and Agular Js for front-end. All the relevant instructions about the projects are present in the github
-              Readme.md
-            </p>
-            <div class="social-icons">
-              <a href="https://github.com/alovega/Monitor-Frontend">
-                <i class="fas fa-code" title="view repository"></i>
-              </a>
-              <a href="https://monitor-frontend.vercel.app/auth/login">
-                <i class="fas fa-eye" title="view design"></i>
-              </a>
-            </div>
-          </div>
-          <br>
-          <br>
-          <div class="resume-content">
-            <div class="subheading mb-3">StackOverflow-lite</div>
-            <p>
-              This Was a bootcamp training project. Mainly to test on my skills as a python developer.
-              So its a python API, created using flask-restful framework. All the relevant instructions 
-              on installing and testing is on the <b>Readme.md</b> of the develop branch.
-            </p>
-            <div class="social-icons">
-              <a href="https://github.com/alovega/StackOverflow-Lite/tree/develop">
-                <i class="fas fa-code" title="view repository"></i>
-              </a>
-            </div>
-          </div>
-          <br>
-          <br>
-          <div class="resume-content">
-              <div class="subheading mb-3">Shopping-Cart</div>
-              <p>
-                This Was a project. Mainly to practise on my front-end development skills.
-                Its purely created using css3, vanilla javascript and Html5.All the relevant instructions 
-                on testing and viewing on github pages is on the <b>Readme.md</b>
-              </p>
-              <div class="social-icons">
-                <a href="https://github.com/alovega/ShoppingCart">
-                  <i class="fas fa-code" title="view repository"></i>
-                </a>
-                <a href="https://alovega.github.io/ShoppingCart/">
-                  <i class="fas fa-eye" title="view design"></i>
-                </a>
-              </div>
-          </div>
-          <br>
-          <br>
-          <div class="resume-content">
-              <div class="subheading mb-3">Textiles</div>
-              <p>
-                This Was a short front-end development project we took with africa collect textiles.
-                I had to put it to a halt after being commited alot with tasks and projects of
-                Interintel technologies. Its
-                <b>Readme.md</b>
-              </p>
-              <div class="social-icons">
-                <a href="https://github.com/alovega/textiles/blob/master/index.html">
-                  <i class="fas fa-code" title="view repository"></i>
-                </a>
-                <a href="https://alovega.github.io/textiles/.">
-                  <i class="fas fa-eye" title="view design"></i>
-                </a>
-              </div>
-          </div>
-            
-        </div>
-
-    </section>
-
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">
-      <div class="w-100">
-        <h2 class="mb-5">Education</h2>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Technical University of Mombasa</h3>
-            <div class="subheading mb-3">Bachelor of Science</div>
-            <div>Mathematics and Computer Science - statistical and software development track</div>
-            <p>GPA: 3.0</p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">September 2013 - November 2017</span>
-          </div>
-        </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
-          <div class="resume-content">
-            <h3 class="mb-0">Utumishi Boys High School</h3>
-            <div class="subheading mb-3">K.C.S.E certificate</div>
-            <p>GPA: 3.56</p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">February 2009 - November 2012</span>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="skills">
-      <div class="w-100">
-        <h2 class="mb-5">Skills</h2>
-
-        <div class="subheading mb-3">Programming Languages &amp; Tools</div>
-        <ul class="list-inline dev-icons">
-          <li class="list-inline-item">
-            <i class="fab fa-html5"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-css3-alt"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-js-square"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-react"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-node-js"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-python"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-gulp"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-grunt"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-npm"></i>
-          </li>
-        </ul>
-
-        <div class="subheading mb-3">Workflow</div>
-        <ul class="fa-ul mb-0">
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Mobile-First, Responsive Design</li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Cross Browser Testing &amp; Debugging</li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Cross Functional Teams</li>
-            <li>
-                <i class="fa-li fa fa-check"></i>
-                Creating APIs in python flask-restful framework, Django Frame work</li>
-                <li>
-                  <i class="fa-li fa fa-check"></i>
-                  Hands on experience of building user interface using polymer a javascript library</li>
-          <li>
-            <li>
-              <i class="fa-li fa fa-check"></i>
-              Hands on experience of building user interface using Angular Js a javascript</li>
-      <li>
-            <i class="fa-li fa fa-check"></i>
-            Agile Development &amp; Scrum</li>
-        </ul>
-      </div>
-    </section>
-
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="interests">
-      <div class="w-100">
-        <h2 class="mb-5">Interests</h2>
-        <p>Apart from being a software developer, I enjoy most of my time being outdoors. During the warmer months here, I enjoy mountain cycling, tried rock/wall climbing, and kayaking.</p>
-        <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend large amount of my free time exploring and learning  the latest technology advancements in the web development world.</p>
-      </div>
-    </section>
-
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="awards">
-      <div class="w-100">
-        <h2 class="mb-5">Awards &amp; Certifications</h2>
-        <ul class="fa-ul mb-0">
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            Google Analytics Certified Developer</li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            Mobile Web Specialist - Google Certification</li>
-      </div>
-    </section>
-
-  </div>
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Plugin JavaScript -->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Custom scripts for this template -->
-  <script src="js/resume.min.js"></script>
-
-</body>
-
+      // Footer year
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>

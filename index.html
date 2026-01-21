@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
@@ -48,9 +48,22 @@
     <style>
       /* Subtle animated gradient background */
       .bg-animated {
-        background: radial-gradient(800px circle at 15% 25%, rgba(56, 189, 248, 0.18), transparent 45%),
-          radial-gradient(900px circle at 85% 35%, rgba(99, 102, 241, 0.22), transparent 40%),
-          radial-gradient(900px circle at 50% 85%, rgba(34, 197, 94, 0.14), transparent 45%),
+        background:
+          radial-gradient(
+            800px circle at 15% 25%,
+            rgba(56, 189, 248, 0.18),
+            transparent 45%
+          ),
+          radial-gradient(
+            900px circle at 85% 35%,
+            rgba(99, 102, 241, 0.22),
+            transparent 40%
+          ),
+          radial-gradient(
+            900px circle at 50% 85%,
+            rgba(34, 197, 94, 0.14),
+            transparent 45%
+          ),
           linear-gradient(180deg, #070a12 0%, #070a12 40%, #05070d 100%);
       }
       .noise:before {
@@ -72,13 +85,17 @@
 
   <body class="bg-animated noise text-slate-100 antialiased">
     <!-- Top gradient line -->
-    <div class="h-1 w-full bg-gradient-to-r from-sky-400 via-indigo-400 to-emerald-400"></div>
+    <div
+      class="h-1 w-full bg-gradient-to-r from-sky-400 via-indigo-400 to-emerald-400"
+    ></div>
 
     <!-- Mobile top bar -->
     <header
       class="sticky top-0 z-50 border-b border-white/10 bg-black/40 backdrop-blur-xl lg:hidden"
     >
-      <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+      <div
+        class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3"
+      >
         <a href="#top" class="font-semibold tracking-tight">
           Kevin <span class="text-sky-400">Alwavega</span>
         </a>
@@ -97,24 +114,69 @@
         aria-label="Mobile navigation"
       >
         <ul class="grid gap-2 text-sm">
-          <li><a class="block rounded-lg px-3 py-2 hover:bg-white/5" href="#about">About</a></li>
-          <li><a class="block rounded-lg px-3 py-2 hover:bg-white/5" href="#experience">Experience</a></li>
-          <li><a class="block rounded-lg px-3 py-2 hover:bg-white/5" href="#projects">Projects</a></li>
-          <li><a class="block rounded-lg px-3 py-2 hover:bg-white/5" href="#education">Education</a></li>
-          <li><a class="block rounded-lg px-3 py-2 hover:bg-white/5" href="#skills">Skills</a></li>
-          <li><a class="block rounded-lg px-3 py-2 hover:bg-white/5" href="#interests">Interests</a></li>
-          <li><a class="block rounded-lg px-3 py-2 hover:bg-white/5" href="#awards">Awards</a></li>
+          <li>
+            <a class="block rounded-lg px-3 py-2 hover:bg-white/5" href="#about"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              class="block rounded-lg px-3 py-2 hover:bg-white/5"
+              href="#experience"
+              >Experience</a
+            >
+          </li>
+          <li>
+            <a
+              class="block rounded-lg px-3 py-2 hover:bg-white/5"
+              href="#projects"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              class="block rounded-lg px-3 py-2 hover:bg-white/5"
+              href="#education"
+              >Education</a
+            >
+          </li>
+          <li>
+            <a
+              class="block rounded-lg px-3 py-2 hover:bg-white/5"
+              href="#skills"
+              >Skills</a
+            >
+          </li>
+          <li>
+            <a
+              class="block rounded-lg px-3 py-2 hover:bg-white/5"
+              href="#interests"
+              >Interests</a
+            >
+          </li>
+          <li>
+            <a
+              class="block rounded-lg px-3 py-2 hover:bg-white/5"
+              href="#awards"
+              >Awards</a
+            >
+          </li>
         </ul>
       </nav>
     </header>
 
-    <div id="top" class="mx-auto grid max-w-6xl gap-8 px-4 py-10 lg:grid-cols-[260px_1fr] lg:py-14">
+    <div
+      id="top"
+      class="mx-auto grid max-w-6xl gap-8 px-4 py-10 lg:grid-cols-[260px_1fr] lg:py-14"
+    >
       <!-- Desktop sidebar -->
       <aside
         class="hidden lg:sticky lg:top-8 lg:block lg:h-[calc(100vh-4rem)]"
         aria-label="Sidebar"
       >
-        <div class="rounded-3xl border border-white/10 bg-white/5 p-5 shadow-glow backdrop-blur-xl">
+        <div
+          class="rounded-3xl border border-white/10 bg-white/5 p-5 shadow-glow backdrop-blur-xl"
+        >
           <div class="flex items-center gap-4">
             <img
               src="img/kelvin.jpeg"
@@ -136,7 +198,9 @@
             </div>
             <div class="flex items-center gap-2">
               <i class="fa-solid fa-phone text-slate-400"></i>
-              <a class="hover:text-sky-300" href="tel:+254748276871">+254 748 276 871</a>
+              <a class="hover:text-sky-300" href="tel:+254748276871"
+                >+254 748 276 871</a
+              >
             </div>
             <div class="flex items-center gap-2">
               <i class="fa-solid fa-envelope text-slate-400"></i>
@@ -150,12 +214,14 @@
           <div class="mt-5 grid grid-cols-4 gap-2">
             <a
               class="group flex items-center justify-center rounded-xl border border-white/10 bg-white/5 p-2 hover:bg-white/10"
-              href="https://www.linkedin.com/in/kevin-alwavega-403843116/"
+              href="https://www.linkedin.com/in/kelvin-alwavega-403843116/"
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn"
             >
-              <i class="fa-brands fa-linkedin-in text-slate-200 group-hover:text-sky-300"></i>
+              <i
+                class="fa-brands fa-linkedin-in text-slate-200 group-hover:text-sky-300"
+              ></i>
             </a>
             <a
               class="group flex items-center justify-center rounded-xl border border-white/10 bg-white/5 p-2 hover:bg-white/10"
@@ -164,7 +230,9 @@
               rel="noreferrer"
               aria-label="GitHub"
             >
-              <i class="fa-brands fa-github text-slate-200 group-hover:text-sky-300"></i>
+              <i
+                class="fa-brands fa-github text-slate-200 group-hover:text-sky-300"
+              ></i>
             </a>
             <a
               class="group flex items-center justify-center rounded-xl border border-white/10 bg-white/5 p-2 hover:bg-white/10"
@@ -173,7 +241,9 @@
               rel="noreferrer"
               aria-label="Twitter"
             >
-              <i class="fa-brands fa-x-twitter text-slate-200 group-hover:text-sky-300"></i>
+              <i
+                class="fa-brands fa-x-twitter text-slate-200 group-hover:text-sky-300"
+              ></i>
             </a>
             <a
               class="group flex items-center justify-center rounded-xl border border-white/10 bg-white/5 p-2 hover:bg-white/10"
@@ -182,20 +252,64 @@
               rel="noreferrer"
               aria-label="Facebook"
             >
-              <i class="fa-brands fa-facebook-f text-slate-200 group-hover:text-sky-300"></i>
+              <i
+                class="fa-brands fa-facebook-f text-slate-200 group-hover:text-sky-300"
+              ></i>
             </a>
           </div>
 
           <!-- Nav -->
           <nav class="mt-6" aria-label="Primary navigation">
             <ul class="space-y-1 text-sm">
-              <li><a class="block rounded-xl px-3 py-2 text-slate-200 hover:bg-white/5" href="#about">About</a></li>
-              <li><a class="block rounded-xl px-3 py-2 text-slate-200 hover:bg-white/5" href="#experience">Experience</a></li>
-              <li><a class="block rounded-xl px-3 py-2 text-slate-200 hover:bg-white/5" href="#projects">Projects</a></li>
-              <li><a class="block rounded-xl px-3 py-2 text-slate-200 hover:bg-white/5" href="#education">Education</a></li>
-              <li><a class="block rounded-xl px-3 py-2 text-slate-200 hover:bg-white/5" href="#skills">Skills</a></li>
-              <li><a class="block rounded-xl px-3 py-2 text-slate-200 hover:bg-white/5" href="#interests">Interests</a></li>
-              <li><a class="block rounded-xl px-3 py-2 text-slate-200 hover:bg-white/5" href="#awards">Awards</a></li>
+              <li>
+                <a
+                  class="block rounded-xl px-3 py-2 text-slate-200 hover:bg-white/5"
+                  href="#about"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  class="block rounded-xl px-3 py-2 text-slate-200 hover:bg-white/5"
+                  href="#experience"
+                  >Experience</a
+                >
+              </li>
+              <li>
+                <a
+                  class="block rounded-xl px-3 py-2 text-slate-200 hover:bg-white/5"
+                  href="#projects"
+                  >Projects</a
+                >
+              </li>
+              <li>
+                <a
+                  class="block rounded-xl px-3 py-2 text-slate-200 hover:bg-white/5"
+                  href="#education"
+                  >Education</a
+                >
+              </li>
+              <li>
+                <a
+                  class="block rounded-xl px-3 py-2 text-slate-200 hover:bg-white/5"
+                  href="#skills"
+                  >Skills</a
+                >
+              </li>
+              <li>
+                <a
+                  class="block rounded-xl px-3 py-2 text-slate-200 hover:bg-white/5"
+                  href="#interests"
+                  >Interests</a
+                >
+              </li>
+              <li>
+                <a
+                  class="block rounded-xl px-3 py-2 text-slate-200 hover:bg-white/5"
+                  href="#awards"
+                  >Awards</a
+                >
+              </li>
             </ul>
           </nav>
 
@@ -226,25 +340,35 @@
           id="about"
           class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-glow backdrop-blur-xl sm:p-8"
         >
-          <div class="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
+          <div
+            class="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between"
+          >
             <div>
-              <p class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-200">
+              <p
+                class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-200"
+              >
                 <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
                 Available for backend roles & consulting
               </p>
 
-              <h1 class="mt-4 text-3xl font-extrabold tracking-tight sm:text-4xl">
+              <h1
+                class="mt-4 text-3xl font-extrabold tracking-tight sm:text-4xl"
+              >
                 Senior Backend Developer building
-                <span class="bg-gradient-to-r from-sky-400 via-indigo-400 to-emerald-400 bg-clip-text text-transparent">
+                <span
+                  class="bg-gradient-to-r from-sky-400 via-indigo-400 to-emerald-400 bg-clip-text text-transparent"
+                >
                   scalable APIs & systems
                 </span>
               </h1>
 
               <p class="mt-4 max-w-2xl text-slate-200 leading-relaxed">
                 I’m Kevin Alwavega — a backend-focused engineer experienced in
-                <span class="font-semibold text-slate-100">Python, PHP, Go, and JavaScript</span>.
-                I design and ship reliable services, improve performance, build maintainable codebases,
-                and collaborate closely with product, QA, and leadership to deliver high-quality systems.
+                <span class="font-semibold text-slate-100"
+                  >Python, PHP, Go, and JavaScript</span
+                >. I design and ship reliable services, improve performance,
+                build maintainable codebases, and collaborate closely with
+                product, QA, and leadership to deliver high-quality systems.
               </p>
 
               <!-- Quick highlights -->
@@ -255,7 +379,9 @@
                 </div>
                 <div class="rounded-2xl border border-white/10 bg-black/20 p-4">
                   <div class="text-xs text-slate-300">Strength</div>
-                  <div class="mt-1 font-semibold">Performance & Scalability</div>
+                  <div class="mt-1 font-semibold">
+                    Performance & Scalability
+                  </div>
                 </div>
                 <div class="rounded-2xl border border-white/10 bg-black/20 p-4">
                   <div class="text-xs text-slate-300">Style</div>
@@ -282,20 +408,34 @@
 
           <!-- Social row (for desktop main too) -->
           <div class="mt-6 flex flex-wrap gap-2">
-            <a class="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm hover:bg-white/10"
-              href="https://www.linkedin.com/in/kevin-alwavega-403843116/" target="_blank" rel="noreferrer">
+            <a
+              class="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm hover:bg-white/10"
+              href="https://www.linkedin.com/in/kelvin-alwavega-403843116/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <i class="fa-brands fa-linkedin-in text-sky-300"></i> LinkedIn
             </a>
-            <a class="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm hover:bg-white/10"
-              href="https://github.com/alovega" target="_blank" rel="noreferrer">
+            <a
+              class="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm hover:bg-white/10"
+              href="https://github.com/alovega"
+              target="_blank"
+              rel="noreferrer"
+            >
               <i class="fa-brands fa-github"></i> GitHub
             </a>
-            <a class="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm hover:bg-white/10"
-              href="https://twitter.com/alovegakevin" target="_blank" rel="noreferrer">
+            <a
+              class="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm hover:bg-white/10"
+              href="https://twitter.com/alovegakevin"
+              target="_blank"
+              rel="noreferrer"
+            >
               <i class="fa-brands fa-x-twitter"></i> X
             </a>
-            <a class="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm hover:bg-white/10"
-              href="mailto:alovegakevin@gmail.com">
+            <a
+              class="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm hover:bg-white/10"
+              href="mailto:alovegakevin@gmail.com"
+            >
               <i class="fa-solid fa-envelope text-emerald-300"></i> Email
             </a>
           </div>
@@ -313,32 +453,235 @@
 
           <div class="mt-6 space-y-6">
             <!-- Role -->
+
             <article class="rounded-2xl border border-white/10 bg-black/20 p-5">
-              <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+              <div
+                class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between"
+              >
                 <div>
-                  <h3 class="text-lg font-semibold">VAS Engineer (Backend)</h3>
-                  <p class="text-sm text-slate-300">Roamtech Limited</p>
+                  <h3 class="text-lg font-semibold">
+                    Senior Software Developer
+                  </h3>
+                  <p class="text-sm text-slate-300">
+                    Masunga(formerly Solaris Offgrid)
+                  </p>
                 </div>
-                <div class="text-sm text-sky-300">June 2022 — Present</div>
+                <div class="text-sm text-sky-300">02/2024 – present</div>
               </div>
 
-              <p class="mt-4 text-slate-200 leading-relaxed">
-                Senior backend developer collaborating with the Head of Technology to design, build,
-                and maintain scalable API services and portals. Hands-on with concurrency testing,
-                requirement analysis, feasibility studies, and mentoring junior developers.
-              </p>
+              <ul class="mt-4 list-disc space-y-2 pl-5 text-slate-200">
+                <li>
+                  Designed and implemented responsive and user-friendly web
+                  interfaces using HTML and CSS.
+                </li>
+                <li>
+                  Ensured cross-browser compatibility and optimized performance
+                  across desktop and mobile devices.
+                </li>
+                <li>
+                  Collaborated closely with UX/UI designers to deliver
+                  intuitive, accessible, and visually appealing layouts using
+                  HTML and CSS.
+                </li>
+                <li>
+                  Developed robust and scalable web applications using Python
+                  Flask and Python Django.
+                </li>
+                <li>
+                  Integrated RESTful APIs to seamlessly connect frontend
+                  applications with backend services.
+                </li>
+                <li>
+                  Ensured high performance, reliability, and responsiveness of
+                  backend services and APIs.
+                </li>
+                <li>
+                  Designed and implemented AI-assisted automation for existing
+                  internal modules, improving operational efficiency, reducing
+                  manual workflows, and enhancing decision-making processes.
+                </li>
+                <li>
+                  Built and integrated AI-driven helpers and automation logic on
+                  top of existing backend modules to support workflow
+                  orchestration, data validation, and system insights.
+                </li>
+                <li>
+                  Utilized Docker for containerization, ensuring consistent
+                  environments across development, testing, and production.
+                </li>
+                <li>
+                  Employed Make to automate build and development workflows,
+                  reducing manual intervention and improving developer
+                  productivity.
+                </li>
+                <li>
+                  Managed deployment workflows, monitoring, and maintenance of
+                  production systems using Python Django.
+                </li>
+                <li>
+                  Implemented CI/CD pipelines to enable reliable, repeatable,
+                  and fast software delivery.
+                </li>
+              </ul>
 
               <div class="mt-4 flex flex-wrap gap-2">
-                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">Python (Flask)</span>
-                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">Vue.js</span>
-                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">PHP (Laravel)</span>
-                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">Go</span>
-                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">APIs</span>
+                <span
+                  class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs"
+                  >Python (Flask)</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs"
+                  >Vue.js</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs"
+                  >PHP (Laravel)</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs"
+                  >APIs</span
+                >
               </div>
             </article>
 
             <article class="rounded-2xl border border-white/10 bg-black/20 p-5">
-              <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+              <div
+                class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between"
+              >
+                <div>
+                  <h3 class="text-lg font-semibold">
+                    Engineer/trainer(Part Time)
+                  </h3>
+                  <p class="text-sm text-slate-300">
+                    Turing Google Services, LLM
+                  </p>
+                </div>
+                <div class="text-sm text-sky-300">10/2024 – 10/2025</div>
+              </div>
+
+              <ul class="mt-4 list-disc space-y-2 pl-5 text-slate-200">
+                <li>
+                  Engineered high-quality code through prompt engineering using
+                  LLM models.
+                </li>
+                <li>
+                  Reviewed and evaluated code generated by LLM models,
+                  identifying and documenting issues.
+                </li>
+                <li>
+                  Collaborated with Google Services by sharing data insights to
+                  enhance model performance.
+                </li>
+                <li>
+                  Utilized TypeScript, JavaScript, and Python for both frontend
+                  and backend tasks.
+                </li>
+                <li>
+                  Trained LLM models on PHP Laravel, CodeIgniter, Plain PHP,
+                  JavaScript, HTML, CSS, Python Flask, and Python Django.
+                </li>
+                <li>
+                  Developed and maintained unit tests in Python for various
+                  backend services.
+                </li>
+                <li>
+                  Improved model accuracy and system efficiency through targeted
+                  training and optimization.
+                </li>
+              </ul>
+
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span
+                  class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs"
+                  >Python (Flask)</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs"
+                  >Vue.js</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs"
+                  >PHP (Laravel)</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs"
+                  >APIs</span
+                >
+              </div>
+            </article>
+
+            <article class="rounded-2xl border border-white/10 bg-black/20 p-5">
+              <div
+                class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between"
+              >
+                <div>
+                  <h3 class="text-lg font-semibold">VAS Engineer (Backend)</h3>
+                  <p class="text-sm text-slate-300">Roamtech Limited</p>
+                </div>
+                <div class="text-sm text-sky-300">07/2022 – 06/2024</div>
+              </div>
+
+              <ul class="mt-4 list-disc space-y-2 pl-5 text-slate-200">
+                <li>
+                  Collaborated with the Head of Technology in designing,
+                  developing, modifying, and maintaining software systems using
+                  Python, PHP, and Golang, improving development efficiency and
+                  reducing project timelines.
+                </li>
+                <li>
+                  Implemented approved designs and developments in Python, PHP,
+                  and Golang according to business specifications, successfully
+                  translating designs into functional software aligned with
+                  business needs.
+                </li>
+                <li>
+                  Participated in concurrency testing for all API services and
+                  portals developed, utilizing Jenkins and Travis CI with Python
+                  and PHP to ensure reliable API services and portals and
+                  enhance user experience.
+                </li>
+                <li>
+                  Analyzed user needs and software requirements and conducted
+                  feasibility studies for product designs, enabling informed
+                  decision-making and realistic project planning.
+                </li>
+                <li>
+                  Collaborated in developing software system testing, validation
+                  procedures, programming, and documentation using Python, PHP,
+                  and Golang, producing high-quality software, enhancing user
+                  satisfaction, and streamlining documentation for future
+                  efforts.
+                </li>
+              </ul>
+
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span
+                  class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs"
+                  >Python (Flask)</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs"
+                  >Vue.js</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs"
+                  >PHP (Laravel)</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs"
+                  >Go</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs"
+                  >APIs</span
+                >
+              </div>
+            </article>
+
+            <article class="rounded-2xl border border-white/10 bg-black/20 p-5">
+              <div
+                class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between"
+              >
                 <div>
                   <h3 class="text-lg font-semibold">Back-End Developer</h3>
                   <p class="text-sm text-slate-300">Wraptious Limited</p>
@@ -347,93 +690,177 @@
               </div>
 
               <ul class="mt-4 list-disc space-y-2 pl-5 text-slate-200">
-                <li>Built maintainable Python tests for Wraptious API to improve reliability.</li>
-                <li>Improved/refactored API codebase for readability and reduced complexity.</li>
-                <li>Designed log parsing/search system for insights and operational visibility.</li>
-                <li>Created backup/archiving strategy for data integrity and availability.</li>
+                <li>
+                  Built maintainable Python tests for Wraptious API to improve
+                  reliability.
+                </li>
+                <li>
+                  Improved/refactored API codebase for readability and reduced
+                  complexity.
+                </li>
+                <li>
+                  Designed log parsing/search system for insights and
+                  operational visibility.
+                </li>
+                <li>
+                  Created backup/archiving strategy for data integrity and
+                  availability.
+                </li>
               </ul>
 
               <div class="mt-4 flex flex-wrap gap-2">
-                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">Python (Flask)</span>
-                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">AngularJS</span>
-                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">Testing</span>
-                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">Scripting</span>
+                <span
+                  class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs"
+                  >Python (Flask)</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs"
+                  >AngularJS</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs"
+                  >Testing</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs"
+                  >Scripting</span
+                >
               </div>
             </article>
 
             <article class="rounded-2xl border border-white/10 bg-black/20 p-5">
-              <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+              <div
+                class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between"
+              >
                 <div>
                   <h3 class="text-lg font-semibold">Back-end Engineer</h3>
                   <p class="text-sm text-slate-300">Helppr AI</p>
                 </div>
-                <div class="text-sm text-sky-300">December 2020 — August 2021</div>
+                <div class="text-sm text-sky-300">
+                  December 2020 — August 2021
+                </div>
               </div>
 
               <ul class="mt-4 list-disc space-y-2 pl-5 text-slate-200">
-                <li>Built and maintained APIs consumed by customers and internal apps.</li>
-                <li>Designed/maintained SQL databases for efficient data storage & retrieval.</li>
-                <li>Worked with task queues and integrations (Celery, RabbitMQ).</li>
-                <li>Contributed to DevOps workflows and improved frontend/backend efficiency.</li>
+                <li>
+                  Built and maintained APIs consumed by customers and internal
+                  apps.
+                </li>
+                <li>
+                  Designed/maintained SQL databases for efficient data storage &
+                  retrieval.
+                </li>
+                <li>
+                  Worked with task queues and integrations (Celery, RabbitMQ).
+                </li>
+                <li>
+                  Contributed to DevOps workflows and improved frontend/backend
+                  efficiency.
+                </li>
               </ul>
 
               <div class="mt-4 flex flex-wrap gap-2">
-                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">Python (Django)</span>
-                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">AngularJS</span>
-                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">Celery</span>
-                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">RabbitMQ</span>
+                <span
+                  class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs"
+                  >Python (Django)</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs"
+                  >AngularJS</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs"
+                  >Celery</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs"
+                  >RabbitMQ</span
+                >
               </div>
             </article>
 
             <article class="rounded-2xl border border-white/10 bg-black/20 p-5">
-              <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+              <div
+                class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between"
+              >
                 <div>
                   <h3 class="text-lg font-semibold">Full-stack Developer</h3>
                   <p class="text-sm text-slate-300">Finance Plan Limited</p>
                 </div>
-                <div class="text-sm text-sky-300">August 2019 — December 2020</div>
+                <div class="text-sm text-sky-300">
+                  August 2019 — December 2020
+                </div>
               </div>
 
               <ul class="mt-4 list-disc space-y-2 pl-5 text-slate-200">
-                <li>Developed maintainable code for core finance system framework.</li>
-                <li>Collaborated with banking & compliance to deliver mobile-friendly features.</li>
-                <li>Gathered requirements and shipped improvements across new/existing apps.</li>
+                <li>
+                  Developed maintainable code for core finance system framework.
+                </li>
+                <li>
+                  Collaborated with banking & compliance to deliver
+                  mobile-friendly features.
+                </li>
+                <li>
+                  Gathered requirements and shipped improvements across
+                  new/existing apps.
+                </li>
               </ul>
 
               <div class="mt-4 flex flex-wrap gap-2">
-                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">Python (Django)</span>
-                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">AngularJS</span>
-                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">Finance Systems</span>
+                <span
+                  class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs"
+                  >Python (Django)</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs"
+                  >AngularJS</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs"
+                  >Finance Systems</span
+                >
               </div>
             </article>
 
             <article class="rounded-2xl border border-white/10 bg-black/20 p-5">
-              <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+              <div
+                class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between"
+              >
                 <div>
                   <h3 class="text-lg font-semibold">Implementation Engineer</h3>
                   <p class="text-sm text-slate-300">Interintel Technologies</p>
                 </div>
-                <div class="text-sm text-sky-300">January 2019 — August 2019</div>
+                <div class="text-sm text-sky-300">
+                  January 2019 — August 2019
+                </div>
               </div>
 
               <p class="mt-4 text-slate-200 leading-relaxed">
-                Built and maintained web applications, helped implement UI designs with UX, supported
-                database management, created training materials, and collaborated with customers and internal teams.
+                Built and maintained web applications, helped implement UI
+                designs with UX, supported database management, created training
+                materials, and collaborated with customers and internal teams.
               </p>
             </article>
 
             <article class="rounded-2xl border border-white/10 bg-black/20 p-5">
-              <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+              <div
+                class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between"
+              >
                 <div>
                   <h3 class="text-lg font-semibold">Intern</h3>
-                  <p class="text-sm text-slate-300">National Hospital Insurance Fund</p>
+                  <p class="text-sm text-slate-300">
+                    National Hospital Insurance Fund
+                  </p>
                 </div>
-                <div class="text-sm text-sky-300">December 2017 — March 2018</div>
+                <div class="text-sm text-sky-300">
+                  December 2017 — March 2018
+                </div>
               </div>
 
               <p class="mt-4 text-slate-200 leading-relaxed">
-                Supported compliance workflows by reviewing hospital claims data and helping streamline approvals.
-                Collected claims & disease data for planning and better allocation of funds.
+                Supported compliance workflows by reviewing hospital claims data
+                and helping streamline approvals. Collected claims & disease
+                data for planning and better allocation of funds.
               </p>
             </article>
           </div>
@@ -452,27 +879,40 @@
               target="_blank"
               rel="noreferrer"
             >
-              View all on GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              View all on GitHub
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
           </div>
 
           <div class="mt-6 grid gap-4 md:grid-cols-2">
             <!-- Card -->
-            <article class="group rounded-2xl border border-white/10 bg-black/20 p-5 hover:bg-black/25">
+            <article
+              class="group rounded-2xl border border-white/10 bg-black/20 p-5 hover:bg-black/25"
+            >
               <div class="flex items-start justify-between gap-3">
                 <div>
                   <h3 class="text-lg font-semibold">Hela-Monitor</h3>
                   <p class="mt-1 text-sm text-slate-300">
-                    Internal database-driven app for monitoring microservices APIs.
+                    Internal database-driven app for monitoring microservices
+                    APIs.
                   </p>
                 </div>
                 <i class="fa-solid fa-heart-pulse text-sky-300"></i>
               </div>
 
               <div class="mt-4 flex flex-wrap gap-2">
-                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">Django</span>
-                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">AngularJS</span>
-                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">Monitoring</span>
+                <span
+                  class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs"
+                  >Django</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs"
+                  >AngularJS</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs"
+                  >Monitoring</span
+                >
               </div>
 
               <div class="mt-5 flex gap-2">
@@ -495,21 +935,33 @@
               </div>
             </article>
 
-            <article class="group rounded-2xl border border-white/10 bg-black/20 p-5 hover:bg-black/25">
+            <article
+              class="group rounded-2xl border border-white/10 bg-black/20 p-5 hover:bg-black/25"
+            >
               <div class="flex items-start justify-between gap-3">
                 <div>
                   <h3 class="text-lg font-semibold">StackOverflow-lite</h3>
                   <p class="mt-1 text-sm text-slate-300">
-                    Bootcamp project: Flask-RESTful API focusing on core backend skills.
+                    Bootcamp project: Flask-RESTful API focusing on core backend
+                    skills.
                   </p>
                 </div>
                 <i class="fa-solid fa-layer-group text-indigo-300"></i>
               </div>
 
               <div class="mt-4 flex flex-wrap gap-2">
-                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">Flask</span>
-                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">REST</span>
-                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">Python</span>
+                <span
+                  class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs"
+                  >Flask</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs"
+                  >REST</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs"
+                  >Python</span
+                >
               </div>
 
               <div class="mt-5">
@@ -524,7 +976,9 @@
               </div>
             </article>
 
-            <article class="group rounded-2xl border border-white/10 bg-black/20 p-5 hover:bg-black/25">
+            <article
+              class="group rounded-2xl border border-white/10 bg-black/20 p-5 hover:bg-black/25"
+            >
               <div class="flex items-start justify-between gap-3">
                 <div>
                   <h3 class="text-lg font-semibold">Shopping-Cart</h3>
@@ -536,9 +990,18 @@
               </div>
 
               <div class="mt-4 flex flex-wrap gap-2">
-                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">HTML5</span>
-                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">CSS3</span>
-                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">JavaScript</span>
+                <span
+                  class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs"
+                  >HTML5</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs"
+                  >CSS3</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs"
+                  >JavaScript</span
+                >
               </div>
 
               <div class="mt-5 flex gap-2">
@@ -561,7 +1024,9 @@
               </div>
             </article>
 
-            <article class="group rounded-2xl border border-white/10 bg-black/20 p-5 hover:bg-black/25">
+            <article
+              class="group rounded-2xl border border-white/10 bg-black/20 p-5 hover:bg-black/25"
+            >
               <div class="flex items-start justify-between gap-3">
                 <div>
                   <h3 class="text-lg font-semibold">Textiles</h3>
@@ -573,9 +1038,18 @@
               </div>
 
               <div class="mt-4 flex flex-wrap gap-2">
-                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">Frontend</span>
-                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">HTML</span>
-                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">CSS</span>
+                <span
+                  class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs"
+                  >Frontend</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs"
+                  >HTML</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs"
+                  >CSS</span
+                >
               </div>
 
               <div class="mt-5 flex gap-2">
@@ -609,12 +1083,19 @@
 
           <div class="mt-6 grid gap-4">
             <article class="rounded-2xl border border-white/10 bg-black/20 p-5">
-              <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+              <div
+                class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between"
+              >
                 <div>
-                  <h3 class="text-lg font-semibold">Technical University of Mombasa</h3>
-                  <p class="text-sm text-slate-300">BSc — Mathematics & Computer Science</p>
+                  <h3 class="text-lg font-semibold">
+                    Technical University of Mombasa
+                  </h3>
+                  <p class="text-sm text-slate-300">
+                    BSc — Mathematics & Computer Science
+                  </p>
                   <p class="mt-2 text-slate-200">
-                    Statistical + software development track • <span class="text-slate-300">GPA:</span> 3.0
+                    Statistical + software development track •
+                    <span class="text-slate-300">GPA:</span> 3.0
                   </p>
                 </div>
                 <div class="text-sm text-sky-300">Sep 2013 — Nov 2017</div>
@@ -622,10 +1103,17 @@
             </article>
 
             <article class="rounded-2xl border border-white/10 bg-black/20 p-5">
-              <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+              <div
+                class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between"
+              >
                 <div>
-                  <h3 class="text-lg font-semibold">Utumishi Boys High School</h3>
-                  <p class="text-sm text-slate-300">K.C.S.E Certificate • <span class="text-slate-300">GPA:</span> 3.56</p>
+                  <h3 class="text-lg font-semibold">
+                    Utumishi Boys High School
+                  </h3>
+                  <p class="text-sm text-slate-300">
+                    K.C.S.E Certificate •
+                    <span class="text-slate-300">GPA:</span> 3.56
+                  </p>
                 </div>
                 <div class="text-sm text-sky-300">Feb 2009 — Nov 2012</div>
               </div>
@@ -644,27 +1132,72 @@
             <div class="rounded-2xl border border-white/10 bg-black/20 p-5">
               <h3 class="font-semibold">Languages & Tools</h3>
               <div class="mt-4 flex flex-wrap gap-2">
-                <span class="rounded-full bg-white/5 px-3 py-1 text-sm ring-1 ring-white/10">Python</span>
-                <span class="rounded-full bg-white/5 px-3 py-1 text-sm ring-1 ring-white/10">Go</span>
-                <span class="rounded-full bg-white/5 px-3 py-1 text-sm ring-1 ring-white/10">PHP</span>
-                <span class="rounded-full bg-white/5 px-3 py-1 text-sm ring-1 ring-white/10">JavaScript</span>
-                <span class="rounded-full bg-white/5 px-3 py-1 text-sm ring-1 ring-white/10">Flask</span>
-                <span class="rounded-full bg-white/5 px-3 py-1 text-sm ring-1 ring-white/10">Django</span>
-                <span class="rounded-full bg-white/5 px-3 py-1 text-sm ring-1 ring-white/10">Laravel</span>
-                <span class="rounded-full bg-white/5 px-3 py-1 text-sm ring-1 ring-white/10">SQL</span>
-                <span class="rounded-full bg-white/5 px-3 py-1 text-sm ring-1 ring-white/10">Celery</span>
-                <span class="rounded-full bg-white/5 px-3 py-1 text-sm ring-1 ring-white/10">RabbitMQ</span>
+                <span
+                  class="rounded-full bg-white/5 px-3 py-1 text-sm ring-1 ring-white/10"
+                  >Python</span
+                >
+                <span
+                  class="rounded-full bg-white/5 px-3 py-1 text-sm ring-1 ring-white/10"
+                  >Go</span
+                >
+                <span
+                  class="rounded-full bg-white/5 px-3 py-1 text-sm ring-1 ring-white/10"
+                  >PHP</span
+                >
+                <span
+                  class="rounded-full bg-white/5 px-3 py-1 text-sm ring-1 ring-white/10"
+                  >JavaScript</span
+                >
+                <span
+                  class="rounded-full bg-white/5 px-3 py-1 text-sm ring-1 ring-white/10"
+                  >Flask</span
+                >
+                <span
+                  class="rounded-full bg-white/5 px-3 py-1 text-sm ring-1 ring-white/10"
+                  >Django</span
+                >
+                <span
+                  class="rounded-full bg-white/5 px-3 py-1 text-sm ring-1 ring-white/10"
+                  >Laravel</span
+                >
+                <span
+                  class="rounded-full bg-white/5 px-3 py-1 text-sm ring-1 ring-white/10"
+                  >SQL</span
+                >
+                <span
+                  class="rounded-full bg-white/5 px-3 py-1 text-sm ring-1 ring-white/10"
+                  >Celery</span
+                >
+                <span
+                  class="rounded-full bg-white/5 px-3 py-1 text-sm ring-1 ring-white/10"
+                  >RabbitMQ</span
+                >
               </div>
             </div>
 
             <div class="rounded-2xl border border-white/10 bg-black/20 p-5">
               <h3 class="font-semibold">Workflow</h3>
               <ul class="mt-4 space-y-2 text-slate-200">
-                <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-300 mt-1"></i> Mobile-first, responsive design</li>
-                <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-300 mt-1"></i> Cross-browser testing & debugging</li>
-                <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-300 mt-1"></i> Cross-functional collaboration</li>
-                <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-300 mt-1"></i> API design & implementation (Flask / Django)</li>
-                <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-300 mt-1"></i> Agile development & Scrum</li>
+                <li class="flex gap-2">
+                  <i class="fa-solid fa-check text-emerald-300 mt-1"></i>
+                  Mobile-first, responsive design
+                </li>
+                <li class="flex gap-2">
+                  <i class="fa-solid fa-check text-emerald-300 mt-1"></i>
+                  Cross-browser testing & debugging
+                </li>
+                <li class="flex gap-2">
+                  <i class="fa-solid fa-check text-emerald-300 mt-1"></i>
+                  Cross-functional collaboration
+                </li>
+                <li class="flex gap-2">
+                  <i class="fa-solid fa-check text-emerald-300 mt-1"></i> API
+                  design & implementation (Flask / Django)
+                </li>
+                <li class="flex gap-2">
+                  <i class="fa-solid fa-check text-emerald-300 mt-1"></i> Agile
+                  development & Scrum
+                </li>
               </ul>
             </div>
           </div>
@@ -678,12 +1211,13 @@
           <h2 class="text-2xl font-bold tracking-tight">Interests</h2>
           <div class="mt-4 space-y-3 text-slate-200 leading-relaxed">
             <p>
-              When I’m not building software, I enjoy being outdoors — mountain cycling, occasional climbing,
-              and kayaking when I can.
+              When I’m not building software, I enjoy being outdoors — mountain
+              cycling, occasional climbing, and kayaking when I can.
             </p>
             <p>
-              Indoors, I’m into sci-fi/fantasy movies and shows, experimenting in the kitchen, and keeping up
-              with the latest web & backend engineering trends.
+              Indoors, I’m into sci-fi/fantasy movies and shows, experimenting
+              in the kitchen, and keeping up with the latest web & backend
+              engineering trends.
             </p>
           </div>
         </section>
@@ -693,19 +1227,29 @@
           id="awards"
           class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-glow backdrop-blur-xl sm:p-8"
         >
-          <h2 class="text-2xl font-bold tracking-tight">Awards & Certifications</h2>
+          <h2 class="text-2xl font-bold tracking-tight">
+            Awards & Certifications
+          </h2>
 
           <ul class="mt-6 space-y-3 text-slate-200">
-            <li class="flex items-start gap-3 rounded-2xl border border-white/10 bg-black/20 p-4">
+            <li
+              class="flex items-start gap-3 rounded-2xl border border-white/10 bg-black/20 p-4"
+            >
               <i class="fa-solid fa-trophy text-amber-300 mt-1"></i>
               <div>
-                <div class="font-semibold">Google Analytics Certified Developer</div>
+                <div class="font-semibold">
+                  Google Analytics Certified Developer
+                </div>
               </div>
             </li>
-            <li class="flex items-start gap-3 rounded-2xl border border-white/10 bg-black/20 p-4">
+            <li
+              class="flex items-start gap-3 rounded-2xl border border-white/10 bg-black/20 p-4"
+            >
               <i class="fa-solid fa-trophy text-amber-300 mt-1"></i>
               <div>
-                <div class="font-semibold">Mobile Web Specialist — Google Certification</div>
+                <div class="font-semibold">
+                  Mobile Web Specialist — Google Certification
+                </div>
               </div>
             </li>
           </ul>
@@ -715,7 +1259,9 @@
         <footer class="pb-10 text-center text-xs text-slate-400">
           <p>
             © <span id="year"></span> Kevin Alwavega • Built with Tailwind CSS •
-            <a class="text-sky-300 hover:text-sky-200" href="#top">Back to top</a>
+            <a class="text-sky-300 hover:text-sky-200" href="#top"
+              >Back to top</a
+            >
           </p>
         </footer>
       </main>
@@ -737,3 +1283,4 @@
     </script>
   </body>
 </html>
+
